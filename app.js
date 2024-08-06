@@ -9,7 +9,7 @@ const mongoose=require("mongoose")
 const methodOverride = require('method-override')
 const ejsMate=require('ejs-mate')
 
-
+const ExpressError=require("./utils/ExpressError.js");
 const sessions=require("express-session");
 const MongoStore=require("connect-mongo")
 const flash=require("connect-flash");
@@ -110,7 +110,9 @@ app.get('/demouser', async (req, res) => {
 
 app.use("/listings",listingRouter);
 app.use('/listings/:id/reviews', reviewRoutes);
-app.use("/",userRouter);
+app.all("*",(req,res,next)=>{
+    next(new ExpressError(404,"page not found!"));
+});
 
 
 //error handler
@@ -131,3 +133,6 @@ app.use((err,req,res,next)=>{
 //     res.status(statusCode).send(message);
 // });
 
+app.listen(8080,()=>{
+    console.log("app is listening")
+});
