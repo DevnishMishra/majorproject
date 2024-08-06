@@ -106,10 +106,12 @@ app.get('/demouser', async (req, res) => {
 //     res.send("sucessfull");
 // });
 
-//if route not present this will run
+
 
 app.use("/listings",listingRouter);
 app.use('/listings/:id/reviews', reviewRoutes);
+app.use("/",userRouter);
+//if route not present this will run
 app.all("*",(req,res,next)=>{
     next(new ExpressError(404,"page not found!"));
 });
