@@ -14,15 +14,40 @@
     <link rel="stylesheet" href="/css/rating.css"/>  
     <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+    <style>
+        .loader{
+            background-color: black;
+            position:fixed ;
+            height: 100vh;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            overflow: hidden; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+        }
+        .spinner-border{
+            width: 5rem;
+            height: 5rem;
+        }
+    </style>
     
 </head>
 <body>
+    <div class="loader">
+    <div class="spinner-border text-danger d-flex justify-content-center" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div></div>
     <%- include("../includes/navbar.ejs") %>
     <div class="container">
         <%- include("../includes/flash.ejs") %>
         <%- body %>
     </div> 
     <%- include("../includes/footer.ejs") %>
+    
      
           
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
