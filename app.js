@@ -92,7 +92,9 @@ app.get('/demouser', async (req, res) => {
         }
     }
 });
-
+app.get('/', (req, res) => {
+    res.render('listings/welcome'); // Render the welcome.ejs file
+  });
 // app.get("/testing",async(req,res)=>{
 //     let sampleListing=  new Listing({
 //         title:"My new villa",

@@ -4,10 +4,16 @@ body{
 
 /* navbar */
 .navbar{
-    height:5rem;
+    min-height:5rem;
     background-color:white;
+    z-index: 1; 
+    position: adjust;
 }
 
+.content {
+    z-index: 0;
+  }
+  
 .fa-compass{
     color: #fe224d;
     font-size: 2rem;
@@ -16,6 +22,7 @@ body{
     color: #222222 !important;
 }
 /* footer */
+
 .f-info-links a{
   text-decoration: none;
   color: #222222;
@@ -43,6 +50,7 @@ body{
     align-items: space-evenly;
     height: 8rem;
     display: flex;
+    margin-top: 5rem;
 }
 .listing-card{
     border: none !important;
@@ -93,3 +101,9 @@ body{
 height: 400px;
 width:80vh;
 }
+@media (max-width: 768px) {
+    .example-class {
+      display: block;
+      width: 100%;
+    }
+  }
