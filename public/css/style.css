@@ -1,110 +1,194 @@
-body{
+body {
     font-family: "Plus Jakarta Sans", sans-serif !important;
 }
 
 /* navbar */
-.navbar{
-    min-height:5rem;
-    background-color:white;
+.navbar {
+    min-height: 5rem;
+    background-color: white;
     z-index: 1; 
-    position: adjust;
+    position: relative; /* adjust -> relative */
 }
 
 .content {
     z-index: 0;
-  }
-  
-.fa-compass{
+}
+
+.fa-compass {
     color: #fe224d;
     font-size: 2rem;
 }
-.nav-link{
+
+.nav-link {
     color: #222222 !important;
 }
+
 /* footer */
 
-.f-info-links a{
-  text-decoration: none;
-  color: #222222;
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
 }
-.f-info-links a:hover{
+
+.f-info-links a:hover {
     text-decoration: underline;
-    
-  }
-.f-info-links, .f-info-socials,.f-info-brands{
+}
+
+.f-info-links, .f-info-socials, .f-info-brands {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .f-info-socials i {
     font-size: 1.2rem;
     margin-right: 1rem;
 }
-.f-info{
+
+.f-info {
     text-align: center;
     background-color: #ebebeb;
-    display:flex;
-    flex-wrap:wrap;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: space-evenly;
     height: 8rem;
-    display: flex;
     margin-top: 5rem;
 }
-.listing-card{
+
+.listing-card {
     border: none !important;
     margin-top: 2rem;
 }
- .card-img-top{
+
+.card-img-top {
     border-radius: 1rem !important;
     width: 100% !important;
     object-fit: cover !important;
-} 
+}
 
 .card-body {
     padding: 0 !important;
 }
 
-.card-text p{
-    font-weight:400 !important;
+.card-text p {
+    font-weight: 400 !important;
 }
-.listing-link{
+
+.listing-link {
     text-decoration: none;
 }
-.card-img-overlay{
+
+.card-img-overlay {
     opacity: 0;
 }
-.card-img-overlay:hover{
+
+.card-img-overlay:hover {
     opacity: 0.2;
     background-color: white;
 }
+
 /* new page */
-.add-btn{
+.add-btn {
     background-color: #fe224d !important;
-    border:none !important
+    border: none !important;
 }
+
 /* edit page */
-.edit-btn{
+.edit-btn {
     background-color: #fe224d !important;
-    border:none !important
+    border: none !important;
+    min-width: 3rem;
 }
+
 /* show image */
-.show-img{
-    height:30vh;
+.show-img {
+    height: 30vh;
 }
-.btns{
+
+.btns {
     display: flex;
 }
+
 /* Map */
 #map {
-height: 400px;
-width:80vh;
+    height: 400px;
+    width: 80vh;
 }
-@media (max-width: 768px) {
-    .example-class {
-      display: block;
-      width: 100%;
-    }
-  }
 
+/* Media Queries */
+
+/* Large screens (992px and up) */
+@media (min-width: 992px) {
+    .navbar {
+        min-height: 6rem; /* increase navbar height for large screens */
+    }
+    .f-info {
+        height: 10rem; /* increase footer height for large screens */
+    }
+    #map {
+        width: 90vh; /* increase map width for large screens */
+    }
+    .listing-card {
+        margin-top: 3rem; /* increase margin top for listing cards on large screens */
+    }
+}
+
+/* Medium screens (768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .example-class {
+        display: block;
+        width: 100%;
+    }
+    .navbar {
+        min-height: 5rem; /* adjust navbar height for medium screens */
+    }
+    .f-info {
+        height: 8rem; /* adjust footer height for medium screens */
+    }
+    #map {
+        width: 80vh; /* adjust map width for medium screens */
+    }
+    .listing-card {
+        margin-top: 2rem; /* adjust margin top for listing cards on medium screens */
+    }
+}
+
+/* Small screens (576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .navbar {
+        min-height: 4rem; /* adjust navbar height for small screens */
+    }
+    .f-info {
+        height: 6rem; /* adjust footer height for small screens */
+    }
+    #map {
+        width: 70vh; /* adjust map width for small screens */
+    }
+    .listing-card {
+        margin-top: 1.5rem; /* adjust margin top for listing cards on small screens */
+    }
+}
+
+/* Extra small screens (on mobile devices) */
+@media (max-width: 575px) {
+    .navbar {
+        min-height: 3rem; /* adjust navbar height for mobile devices */
+    }
+    .f-info {
+        height: 4rem; /* adjust footer height for mobile devices */
+    }
+    #map {
+        width: 33vh; /* adjust map width for mobile devices */
+    }
+    .listing-card {
+        margin-top: 1rem; /* adjust margin top for listing cards on mobile devices */
+    }
+    .card-img-top {
+        width: 90% !important; /* adjust card image width for mobile devices */
+    }
+    .card-body {
+        padding: 1rem !important; /* add padding to*/
+    }
+}

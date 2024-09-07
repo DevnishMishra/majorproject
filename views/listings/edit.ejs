@@ -1,4 +1,12 @@
 <% layout('/layouts/boilerplate') -%>
+<style>
+
+    .image{
+        height:150px;
+        width:150px;
+    }
+
+ </style>
 <body>
     <div class="row mt-3">
         <div class="col-8 offset-2">
@@ -25,9 +33,9 @@
                         Please provide a description.
                     </div>
                 </div>
-                <div class="mb-3">
+                <div class=" mb-3">
                     Original Listing Image</br>
-                    <image src="<%= originalImageUrl %>" />
+                    <image class="image" src="<%= originalImageUrl %>" />
                 </div>
                 <div class="mb-3">
                     <label for="image" class="form-label">Image Link</label>
